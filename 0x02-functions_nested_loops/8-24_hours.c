@@ -31,17 +31,17 @@ void jack_bauer(void)
 	j = 2;
 	for (i = 0; i <= 3; i++)
 	{
-		 for (m = 0; m <= 5; m++)
-		 {
-			 for (n = 0; n <= 9; n++)
-			 {
-				 _putchar(j + '0');
-				 _putchar(i + '0');
-				 _putchar(':');
-				 _putchar(m + '0');
-				 _putchar(n + '0');
-				 _putchar('\n');
-			 }
+		for (m = 0; m <= 5; m++)
+		{
+			for (n = 0; n <= 9; n++)
+			{
+				_putchar(j + '0');
+				_putchar(i + '0');
+				_putchar(':');
+				_putchar(m + '0');
+				_putchar(n + '0');
+				_putchar('\n');
+			}
 		}
 	}
 }
