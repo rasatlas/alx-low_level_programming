@@ -18,8 +18,6 @@ void _printNumber(int num)
 	j = num % 10;
 	_putchar(i + '0');
 	_putchar(j + '0');
-	_putchar(',');
-	_putchar(' ');
 }
 
 /**
@@ -33,18 +31,22 @@ void times_table(void)
 
 	for (row = 0; row <= 9; row++)
 	{
-		for (column = 0; column <= 9; column++)
+		_putchar('0');
+		for (column = 1; column <= 9; column++)
 		{
 			p = (row * column);
 			if (p > 9)
 			{
+				_putchar(',');
+				_putchar(' ');
 				_printNumber(p);
 			}
 			else
 			{
-				_putchar(p + '0');
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
+				_putchar(p + '0');
 			}
 		}
 		_putchar('\n');
