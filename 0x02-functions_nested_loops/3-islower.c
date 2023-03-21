@@ -3,10 +3,10 @@
 /**
  * _islower - is a function that checks for lowercase character.
  *
- * c - is value passed to _islower to check it it is lowercase or not.
+ * @c: is value passed to _islower to check it it is lowercase or not.
  *
- * return 1 if success
- * retrun 0 if otherwise
+ * Return: on Success 1.
+ * On error, 0
  */
 
 int _islower(int c)

@@ -3,11 +3,11 @@
 /**
  *  print_alphabet - prints the alphabet, in lowercase, followed by a new line.
  *
- *  return - returns 0 (Success)
+ *  return: void
  *
  */
 
-void print_alphabet (void)
+void print_alphabet(void)
 {
 	int start = 'a';
 	int stop = 'z';
@@ -18,5 +18,4 @@ void print_alphabet (void)
 		start++;
 	}
 	_putchar('\n');
-	return;
 }
