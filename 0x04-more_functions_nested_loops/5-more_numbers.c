@@ -7,8 +7,6 @@
 
 void more_numbers(void)
 {
-	void more_numbers(void)
-{
 	int i, j, k;
 	char c = '\n';
 
