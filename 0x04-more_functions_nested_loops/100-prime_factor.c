@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - entry point
  *
  * Return: 0 Success
  */
-int main()
+
+int main(void)
 {
 	long int i, j, k, n = 612852475143;
 
