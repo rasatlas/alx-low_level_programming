@@ -1,36 +1,32 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * main - entry point
+ * main - entry point for a program that finds and
+ * prints the largest prime factor of the number
+ * 612852475143, followed by a new line.
  *
- * Return: 0 Success
+ * Return: Always 0.
  */
-
 int main(void)
 {
-	long int i, j, k, n = 612852475143;
+	long primeNum = 612852475143, divisor;
 
-	i = 2;
-	while(i < n)
+	while (divisor < (primeNum / 2))
 	{
-		if (n % i == 0)
+		if ((primeNum % 2) == 0)
 		{
-			j = 2;
-			while(j < i)
-			{
-				if (i % j == 0)
-				{
-					break;
-				}
-				else
-					j++;
-			}
-			if (j == i)
-				k = i;
+			primeNum /= 2;
+			continue;
 		}
-		i++;
+
+		for (divisor = 3; divisor < (primeNum / 2); divisor += 2)
+		{
+			if ((primeNum % divisor) == 0)
+				primeNum /= divisor;
+		}
 	}
-	printf("%d\n", k);
+
+	printf("%ld\n", primeNum);
+
 	return (0);
 }
