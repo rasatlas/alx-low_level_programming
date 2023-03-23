@@ -7,14 +7,14 @@
 
 void more_numbers(void)
 {
-	int i = 0;
+	int i;
 	int j = 1;
 	int upperLimit = 14;
 	int xPrint = 10;
 
 	while (j <= xPrint)
 	{
-		for (; i <= upperLimit; i++)
+		for (int = 0; i <= upperLimit; i++)
 		{
 			_putchar(i + '0');
 		}
