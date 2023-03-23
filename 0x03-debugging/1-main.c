@@ -2,7 +2,6 @@
 
 /**
  * main - Entry point and causes an infinite loop
- *
  * Return: 0
  */
 
