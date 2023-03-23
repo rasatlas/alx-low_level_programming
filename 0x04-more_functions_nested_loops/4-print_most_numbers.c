@@ -13,7 +13,7 @@ void print_most_numbers(void)
 	while (start <= upperLimit)
 	{
 		if ((start == 2) || (start == 4))
-			continue;
+			;
 		else
 			print_numbers();
 
