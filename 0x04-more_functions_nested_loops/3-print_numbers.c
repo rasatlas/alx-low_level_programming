@@ -12,6 +12,7 @@ void print_numbers(void)
 
 	while (i <= upperLimit)
 	{
-		_putchar(i + '\0');
+		_putchar(i + '0');
 	}
+	_putchar('\n');
 }
