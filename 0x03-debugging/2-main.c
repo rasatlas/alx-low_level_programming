@@ -8,8 +8,7 @@
 
 int main(void)
 {
-	int a, b, c;
-	int largest;
+	int a, b, c, largest;
 
 	a = 972;
 	b = -98;
