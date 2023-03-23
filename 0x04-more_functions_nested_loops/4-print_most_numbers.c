@@ -15,7 +15,7 @@ void print_most_numbers(void)
 		if ((start == 2) || (start == 4))
 			continue;
 		else
-			print_numbers;
+			print_numbers();
 
 		start++;
 	}
