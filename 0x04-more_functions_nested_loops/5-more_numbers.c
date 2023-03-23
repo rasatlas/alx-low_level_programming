@@ -7,18 +7,22 @@
 
 void more_numbers(void)
 {
-	int i;
-	int j = 1;
-	int upperLimit = 14;
-	int xPrint = 10;
+	void more_numbers(void)
+{
+	int i, j, k;
+	char c = '\n';
 
-	while (j <= xPrint)
+	for (i = 0; i <= 9; i++)
 	{
-		for (i = 0; i <= upperLimit; i++)
+		for (j = 0; j <= 9; j++)
 		{
-			_putchar(i + '0');
+			_putchar(j + '0');
 		}
-		_putchar('\n');
-		j++;
+		for (k = 0; k <= 4; k++)
+		{
+			_putchar('1');
+			_putchar(k + '0');
+		}
+		write(1, &c, 1);
 	}
 }
