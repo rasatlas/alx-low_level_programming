@@ -14,7 +14,7 @@ void more_numbers(void)
 
 	while (j <= xPrint)
 	{
-		for (int = 0; i <= upperLimit; i++)
+		for (i = 0; i <= upperLimit; i++)
 		{
 			_putchar(i + '0');
 		}
