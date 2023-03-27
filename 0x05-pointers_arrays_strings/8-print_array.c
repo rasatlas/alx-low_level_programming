@@ -10,17 +10,16 @@
 
 void print_array(int *a, int n)
 {
-	int i;
+	int i = 0;
 
-	if (i <= 0)
-		break;
-	else
+	while (n > 0)
 	{
-		for (i = 0; i < n - 1; i++)
-		{
-			printf("%d, ", *a);
-			a++;
-		}
-		printf("%d\n", *a);
+		printf("%i", a[i]);
+		i++;
+		n--;
+
+		if (n != 0)
+			printf(", ");
 	}
+	printf("\n");
 }
