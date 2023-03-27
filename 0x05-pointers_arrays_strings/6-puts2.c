@@ -1,22 +1,19 @@
 #include "main.h"
 
 /**
- * puts2 - prints string
- * @str: input string to be printed
- *
- * Retrun: void
+ * puts2 - Print one char out
+ * @str: String
  */
+
 void puts2(char *str)
 {
-	int i;
+	int index = 0, len = 0;
 
-	i = 0;
-	while (i < 2)
-	{
-		if (*str == '\0')
-			break;
-		_putchar(*str);
-		str = str + 2;
-	}
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
 	_putchar('\n');
 }
