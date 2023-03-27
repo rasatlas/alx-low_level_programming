@@ -31,15 +31,10 @@ void print_rev(char *s)
 {
 	int i = _strlen(s);
 
-	if (i == 0)
-		_putchar('\n');
-	else
+	while ((i != 0) && (i != '\0'))
 	{
-		while (i >= 0)
-		{
-			_putchar(s[i - 1]);
-			i--;
-		}
-		_putchar('\n');
+		_putchar(s[i - 1]);
+		i--;
 	}
+	_putchar('\n');
 }
