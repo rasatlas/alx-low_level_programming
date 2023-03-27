@@ -18,6 +18,8 @@ char *_strcpy(char *dest, char *src)
 
 	for (a = 0; a < 1; a++)
 	{
+		d = dest;
+
 		while (*src != '\0')
 		{
 			*dest = *src;
