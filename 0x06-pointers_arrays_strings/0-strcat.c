@@ -11,11 +11,11 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *ptr;
+	char *ptr = dest;
 
 	if (*src != '\0')
 	{
-		ptr = dest;
+		/*ptr = dest;*/
 
 		while (*dest != '\0')
 		{
@@ -28,7 +28,6 @@ char *_strcat(char *dest, char *src)
 			dest++;
 			src++;
 		}
-		*dest = '\0';
 	}
 
 	return (ptr);
