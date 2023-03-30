@@ -12,18 +12,24 @@ char *cap_string(char *str)
 {
 	char *ptr = str;
 
-	while (*str != '\0')
+	if (*str != '\0')
 	{
-		if ((*str == ' ') || (*str == '\n') || (*str == '\t') || (*str == ',') || (*str == '.') || (*str == '!') || (*str == '?') || (*str == '"') || (*str == '(') || (*str == ')') || (*str == '{') || (*str == '}'))
+		if ((*str >= 97) && (*str <= 122))
+			*str -= 32;
+
+		while (*str != '\0')
 		{
-			str++;
-			if ((*str >= 97) && (*str <= 122))
+			if ((*str == ' ') || (*str == '\n') || (*str == '\t') || (*str == ',') || (*str == '.') || (*str == '!') || (*str == '?') || (*str == '"') || (*str == '(') || (*str == ')') || (*str == '{') || (*str == '}'))
 			{
-				*str -= 32;
+				str++;
+				if ((*str >= 97) && (*str <= 122))
+				{
+					*str -= 32;
+				}
+				str--;
 			}
-			str--;
+			str++;
 		}
-		str++;
 	}
 	return (ptr);
 }
