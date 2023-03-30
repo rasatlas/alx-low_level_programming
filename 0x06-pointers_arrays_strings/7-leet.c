@@ -11,20 +11,19 @@
 char *leet(char *str)
 {
 	char *ptr = str;
+	int i, j;
+	char a_array[] = "aAeEoOtTlL";
+	char n_array[] = "4433007711";
 
-	while (*str != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((*str == 'A') || (*str == 'a'))
-			*str = '4';
-		else if ((*str == 'E') || (*str == 'e'))
-			*str = '3';
-		else if ((*str == 'O') || (*str == 'o'))
-			*str = '0';
-		else if ((*str == 'T') || (*str == 't'))
-			*str = '7';
-		else if ((*str == 'L') || (*str == 'l'))
-			*str = '1';
-		str++;
+		for (j = 0; j < 10; j++)
+		{
+			if (str[i] == a_array[j])
+			{
+				str[i] = n_array[j];
+			}
+		}
 	}
 	return (ptr);
 }
