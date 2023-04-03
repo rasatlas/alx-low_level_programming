@@ -12,7 +12,6 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *ptr;
 	int i, j;
 
 	if ((*accept != '\0') && (*s != '\0'))
@@ -29,7 +28,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	if (*accept == '\0')
-		ptr = NULL;
-	return (ptr);
+	return (0);
 }
