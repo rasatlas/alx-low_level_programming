@@ -35,33 +35,32 @@ char *_strstr(char *haystack, char *needle)
 }
 
 /*
-
-char *_strstr(char *haystack, char *needle)
-{
-	char *ptrH = haystack;
-	char *ptrN = needle;
-	char *ptr;
-
-	if (*needle == '\0')
-		return (haystack);
-
-	while (*ptrH != '\0')
-	{
-		ptr = ptrH;
-
-		while ((*ptrH != '\0') && (*ptrN != '\0') && (*ptrH == *ptrN))
-		{
-			ptrH++;
-			ptrN++;
-		}
-
-		if (*ptrN == '\0')
-		{
-			return (ptr);
-		}
-
-		ptrH = (ptr + 1);
-	}
-	return ('\0');
-}
+*char *_strstr(char *haystack, char *needle)
+*{
+*	char *ptrH = haystack;
+*	char *ptrN = needle;
+*	char *ptr;
+*
+*	if (*needle == '\0')
+*		return (haystack);
+*
+*	while (*ptrH != '\0')
+*	{
+*		ptr = ptrH;
+*
+*		while ((*ptrH != '\0') && (*ptrN != '\0') && (*ptrH == *ptrN))
+*		{
+*			ptrH++;
+*			ptrN++;
+*		}
+*
+*		if (*ptrN == '\0')
+*		{
+*			return (ptr);
+*		}
+*
+*		ptrH = (ptr + 1);
+*	}
+*	return ('\0');
+*}
 */
