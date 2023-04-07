@@ -48,7 +48,10 @@ int main(int argc, char *argv[])
 	else if (argc == 2)
 	{
 		if (isNumber(argv[1]))
-			return (atoi(argv[1]));
+		{
+			printf("%i\n", atoi(argv[1]));
+			return (0);
+		}
 		printf("%s\n", "Error");
 		return (1);
 
@@ -69,5 +72,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	return (sum);
+	printf("%i\n", sum);
+	return (0);
 }
