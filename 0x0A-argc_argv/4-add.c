@@ -3,18 +3,18 @@
 /**
  * isNumber -  checks if a number is digit or not.
  *
- * @argv: pointer to a number to be checked for being digit.
+ * @arg: pointer to a number to be checked for being digit.
  *
  * Return: 1 if digit, otherwise 0.
  */
 
-int isNumber(char *argv)
+int isNumber(char *arg)
 {
 	int i;
 
-	for (i = 0; argv[i] != '\0'; i++)
+	for (i = 0; arg[i] != '\0'; i++)
 	{
-		if (!isdigit(argv[i]))
+		if (!isdigit(arg[i]))
 		{
 			return (0);
 		}
@@ -44,20 +44,20 @@ int main(int argc, char  *argv[])
 		{
 			if (isNumber(argv[i]))
 			{
-				sum += atoi(argv[i]);
+				sum += (atoi(argv[i]));
 			}
 			else
 			{
-				printf("Error\n");
+				printf("%s\n", "Error");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
+		printf("%i\n", sum);
 		return (0);
 	}
 	else
 	{
-		printf("%d\n", 0);
+		printf("%i\n", 0);
 		return (1);
 	}
 
