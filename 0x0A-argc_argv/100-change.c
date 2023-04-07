@@ -1,41 +1,6 @@
 #include "main.h"
 
 /**
- * _changer - changes notes into cents.
- *
- * @note: value to changed into different denominations of cents.
- * Return: note interms of cents.
- */
-
-int _changer(int note)
-{
-	if (note == 0)
-	{
-		return (0);
-	}
-	else if (note >= 25)
-	{
-		return (1 + _changer(note - 25));
-	}
-	else if (note >= 10)
-	{
-		return (1 + _changer(note - 10));
-	}
-	else if (note >= 5)
-	{
-		return (1 + _changer(note - 5));
-	}
-	else if (note >= 2)
-	{
-		return (1 + _changer(note - 2));
-	}
-	else
-	{
-		return (1 + _changer(note - 1));
-	}
-}
-
-/**
  * main - entry point and a program that prints the minimum number
  * of coins to make change for an amount of money.
  *
@@ -46,21 +11,44 @@ int _changer(int note)
  * 0 if the number passed as the argument is negative.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
-	int note;
+	int coins = 0;
+	int money;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
-		printf("%s\n", "Error");
-		return (1);
-	}
-	note = atoi(argv[1]);
-	if (note < 0)
-	{
-		printf("%i\n", 0);
+		if (strchr(argv[argc - 1], '-'))
+		{
+			printf("0\n");
+			return (1);
+		}
+
+		money = atoi(argv[argc - 1]);
+
+		while (money > 0)
+		{
+			if (money % 25 == 0)
+			{
+				money -= 25;
+			} else if (money % 10 == 0)
+			{
+				money -= 10;
+			} else if (money % 5 == 0)
+			{
+				money -= 5;
+			} else if (money % 2 == 0)
+			{
+				money -= 2;
+			} else
+			{
+				money--;
+			}
+			coins++;
+		}
+		printf("%d\n", coins);
 		return (0);
 	}
-	printf("%i\n", _changer(note));
-	return (0);
+	printf("Error\n");
+	return (1);
 }
