@@ -10,12 +10,9 @@
 
 int isNumber(char *arg)
 {
-	int i = 0;
+	int i;
 
-	if (arg[0] == '-')
-		i = 1;
-
-	for (; arg[i] != '\0'; i++)
+	for (i = 0; arg[i] != '\0'; i++)
 	{
 		if (!isdigit(arg[i]))
 		{
