@@ -45,18 +45,6 @@ int main(int argc, char *argv[])
 		return (printf("%i\n", 0));
 	}
 
-	else if (argc == 2)
-	{
-		if (isNumber(argv[1]))
-		{
-			printf("%i\n", atoi(argv[1]));
-			return (0);
-		}
-		printf("%s\n", "Error");
-		return (1);
-
-	}
-
 	else if (argc >= 3)
 	{
 		for (i = 1; i < argc; i++)
