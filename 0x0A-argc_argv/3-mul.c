@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
  * main - entry point and a program that multiplies two numbers.
@@ -12,11 +11,12 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc < 3)
+	if (argc == 3)
 	{
-		printf("%s\n", "Error");
-		return (1);
+		printf("%i\n", ((atoi(argv[1])) * (atoi(argv[2]))));
+		return (0);
 	}
 	else
-		return (printf("%i\n", ((atoi(argv[1])) * (atoi(argv[2])))));
+		return (printf("%s\n", "Error"));
+	return (1);
 }
