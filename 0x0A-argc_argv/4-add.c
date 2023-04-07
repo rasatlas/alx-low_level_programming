@@ -1,31 +1,6 @@
 #include "main.h"
 
 /**
- * isNumber -  checks if a number is digit or not.
- *
- * @arg: pointer to a number to be checked for being digit.
- *
- * Return: 1 if digit, otherwise 0.
- */
-
-int isNumber(char *arg)
-{
-	int i = 0;
-
-	if (arg[0] == '-')
-		i = 1;
-
-	for (; arg[i] != '\0'; i++)
-	{
-		if (!isdigit(arg[i]))
-		{
-			return (0);
-		}
-	}
-	return (1);
-}
-
-/**
  * main - entry point & a program that adds positive numbers.
  *
  * @argc: argument count.
@@ -36,33 +11,25 @@ int isNumber(char *arg)
  * followed by a new line, and return 1.
  */
 
-int main(int argc, char  *argv[])
+int main(int argc, char *argv[])
 {
-	int i;
-	char *ptr;
 	int sum = 0;
+	char *ptr;
 
-	if (argc > 1)
+	for (int i = 1; i < argc; i++)
 	{
-		for (i = 1; i < argc; i++)
+		ptr = argv[i];
+		for (int j = 0; ptr[j] != '\0'; j++)
 		{
-			if (isNumber(argv[i]))
-			{
-				sum += (strtol(argv[i], &ptr, 10));
-			}
-			else
+			if (!isdigit(ptr[j]))
 			{
 				printf("%s\n", "Error");
 				return (1);
 			}
 		}
-		printf("%i\n", sum);
-		return (0);
+		sum += atoi(ptr);
 	}
-	else
-	{
-		printf("%i\n", 0);
-		return (1);
-	}
-
+	printf("%i\n", sum);
+	return 0;
 }
+
