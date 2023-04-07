@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		printf("%s\n", "Error");
 		return (1);
 	}
-	if (atoi(argv[argc - 1]) < 0)
+	else if (atoi(argv[argc - 1]) < 0)
 	{
 		printf("%i\n", 0);
 		return (0);
@@ -49,6 +49,6 @@ int main(int argc, char *argv[])
 		}
 		coins++;
 	}
-	printf("%d\n", coins);
+	printf("%i\n", coins);
 	return (0);
 }
