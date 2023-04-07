@@ -7,6 +7,5 @@
 #include <string.h>
 
 int _putchar(char c);
-int isNumber(char *arg);
 
 #endif /* MAIN_H */
