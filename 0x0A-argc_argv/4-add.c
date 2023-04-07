@@ -39,6 +39,7 @@ int isNumber(char *arg)
 int main(int argc, char  *argv[])
 {
 	int i;
+	char *ptr;
 	int sum = 0;
 
 	if (argc > 1)
@@ -47,7 +48,7 @@ int main(int argc, char  *argv[])
 		{
 			if (isNumber(argv[i]))
 			{
-				sum += (atoi(argv[i]));
+				sum += (strtol(argv[i], &ptr, 10));
 			}
 			else
 			{
