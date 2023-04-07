@@ -35,17 +35,12 @@ int isNumber(char *argv)
  * followed by a new line, and return 1.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char  *argv[])
 {
 	int i;
 	int sum = 0;
 
-	if (argc == 1)
-	{
-		return (printf("%i\n", 0));
-	}
-
-	else if (argc >= 3)
+	if (argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -55,11 +50,17 @@ int main(int argc, char *argv[])
 			}
 			else
 			{
-				printf("%s\n", "Error");
+				printf("Error\n");
 				return (1);
 			}
 		}
+		printf("%d\n", sum);
+		return (0);
 	}
-	printf("%i\n", sum);
-	return (0);
+	else
+	{
+		printf("%d\n", 0);
+		return (1);
+	}
+
 }
