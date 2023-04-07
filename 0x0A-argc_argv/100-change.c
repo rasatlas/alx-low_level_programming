@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 2)
 	{
-		if (strchr(argv[argc - 1], '-'))
+		if ((atoi(argv[argc - 1])) < 0)
 		{
 			printf("0\n");
 			return (1);
