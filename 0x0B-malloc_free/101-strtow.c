@@ -45,7 +45,7 @@ int countWords(char *str)
 
 /**
  * strtow - a function that splits a string into words.
- * 
+ *
  * @str: string to be split.
  *
  * Return: returns NULL if str is NULL, "" or fails. Otherwise char pointer.
