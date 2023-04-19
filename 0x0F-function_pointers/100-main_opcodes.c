@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int byte, i;
-	unsigned char *ptr;
+	char *ptr;
 
 	if (argc != 2)
 	{
@@ -22,14 +22,16 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	byte = strtoul(argv[1], NULL, 16);
+	byte = atoi(argv[1]);
+
 	if (byte <= 0)
 	{
 		printf("%s\n", "Error");
 		exit(2);
 	}
 
-	ptr = (unsigned char *) __builtin_return_address(0);
+	/* ptr = __builtin_return_address(0);*/
+	ptr = (char *)main;
 
 	for (i = 0; i < byte; i++)
 	{
