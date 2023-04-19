@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	byte = atoi(argv[1]);
-	if (byte < 0)
+	byte = strtoul(argv[1], NULL, 16);
+	if (byte <= 0)
 	{
 		printf("%s\n", "Error");
 		exit(2);
