@@ -30,8 +30,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	/* ptr = __builtin_return_address(0);*/
-	ptr = (char *)main;
+	ptr = __builtin_return_address(0);
 
 	for (i = 0; i < byte; i++)
 	{
