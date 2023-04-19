@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int byte, i;
-	char *ptr;
+	unsigned char *ptr;
 
 	if (argc != 2)
 	{
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	ptr = __builtin_return_address(0);
+	ptr = (unsigned char *) __builtin_return_address(0);
 
 	for (i = 0; i < byte; i++)
 	{
