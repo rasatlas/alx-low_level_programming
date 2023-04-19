@@ -10,8 +10,13 @@
 
 int main(int argc, char *argv[])
 {
-	if (*argv[2] != '+' || *argv[2] != '-' ||
-		*argv[2] != '*' || *argv[2] != '/' || *argv[2] != '%')
+	int a, b;
+	int (*pfunc)(int, int);
+
+	pfunc = get_op_func(argv[2]);
+
+	if ((pfunc == NULL) && (*argv[2] != '+' || *argv[2] != '-' ||
+		*argv[2] != '*' || *argv[2] != '/' || *argv[2] != '%'))
 	{
 		printf("%s\n", "Error");
 		exit(99);
@@ -19,12 +24,9 @@ int main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		int a, b;
-		int (*pfunc)(int, int);
-
 		a = atoi(argv[1]);
 		b = atoi(argv[3]);
-		pfunc = get_op_func(argv[2]);
+
 		if ((*argv[2] == '%' || *argv[2] == '/') && b == 0)
 		{
 			printf("%s\n", "Error");
