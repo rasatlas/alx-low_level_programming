@@ -4,7 +4,8 @@
  * print_list - a function that prints all the elements of a list_t list.
  *
  * @h: a struct pointer of type list_t.
- * Return: number of nodes.
+ *
+ * Return: returns number of nodes.
  */
 
 size_t print_list(const list_t *h)
@@ -20,5 +21,6 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		counter++;
 	}
+
 	return (counter);
 }
