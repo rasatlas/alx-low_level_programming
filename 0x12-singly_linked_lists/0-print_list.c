@@ -2,9 +2,7 @@
 
 /**
  * print_list - a function that prints all the elements of a list_t list.
- *
  * @h: a struct pointer of type list_t.
- *
  * Return: returns number of nodes.
  */
 
