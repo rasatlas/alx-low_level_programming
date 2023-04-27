@@ -6,7 +6,7 @@
  * @head: pointer to a pointer of type list_t.
  * @str: string data of struct.
  *
- * Return -  the address of the new element, or NULL if it failed
+ * Return:  the address of the new element, or NULL if it failed
  */
 
 list_t *add_node_end(list_t **head, const char *str)
