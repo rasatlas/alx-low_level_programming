@@ -9,24 +9,15 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t counter;
-	const list_t *current;
+	int counter = 0;
 
-	current = malloc(sizeof(list_t));
-	if (current == NULL)
+	while (h != NULL)
 	{
-		printf("Error\n");
-		return (1);
-	}
-
-	current = h;
-	counter = 0;
-
-	while (current != NULL)
-	{
-		printf("[%d] %s\n", current->len,
-		current->str != NULL ? current->str : "(nill)");
-		current = current->next;
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		h = h->next;
 		counter++;
 	}
 	return (counter);
