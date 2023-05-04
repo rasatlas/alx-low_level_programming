@@ -1,7 +1,8 @@
-#0x14. C - Bit manipulation
+# 0x14. C - Bit manipulation
 
-#Requirements
-#General
+# Requirements
+
+# General
 
 - Allowed editors: vi, vim, emacs
 - All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -18,7 +19,7 @@
 - Don’t forget to push your header file
 - All your header files should be include guarded
 
-#Tasks
+# Tasks
 
 - 0.0 - Write a function that converts a binary number to an unsigned int.
 - 1.1 - Write a function that prints the binary representation of a number.
