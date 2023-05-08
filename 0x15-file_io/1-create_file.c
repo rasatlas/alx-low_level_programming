@@ -15,7 +15,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int finalOut = 0;
+	int output = 0;
 	int file = 0;
 	int i = 0;
 
@@ -30,9 +30,9 @@ int create_file(const char *filename, char *text_content)
 		{
 			i++;
 		}
-		finalOut = write(file, text_content, i);
+		output = write(file, text_content, i);
 	}
-	if (finalOut == -1 && finalOut != i)
+	if (output == -1 && output != i)
 		return (-1);
 	return (1);
 }
