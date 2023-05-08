@@ -15,24 +15,24 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int output = 0;
-	int file = 0;
-	int i = 0;
+	int fOpen, fWrite, len = 0;
 
 	if (filename == NULL)
 		return (-1);
-	file = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
-	if (file == -1)
-		return (-1);
+
 	if (text_content != NULL)
 	{
-		while (*(text_content + x) != '\0')
-		{
-			i++;
-		}
-		output = write(file, text_content, i);
+		for (len = 0; text_content[len];)
+			len++;
 	}
-	if (output == -1 && output != i)
+
+	fOpen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	fWrite = write(fOpen, text_content, len);
+
+	if (fOpen == -1 || fWrite == -1)
 		return (-1);
+
+	close(fOpen);
+
 	return (1);
 }
