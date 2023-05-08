@@ -13,23 +13,23 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int file;
-	int output;
-	int i;
+	int i = 0, file;
 
 	if (filename == NULL)
 		return (-1);
-	if (file == -1)
-	return (-1);
+
 	if (text_content == NULL)
-		return (1);
-	while (*(text_content + i) != '\0')
+		text_content = "";
+
+	while (text_content[i] != '\0')
 		i++;
 
-	file = open(filename, O_RDWR | O_APPEND);
+	file = open(filename, O_WRONLY | O_APPEND);
 
-	output = write(file, text_content, i);
-	if (output == -1)
+	if (file == -1)
 		return (-1);
+
+	write(file, text_content, i);
+
 	return (1);
 }
