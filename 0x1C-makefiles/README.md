@@ -15,16 +15,12 @@
 * In the following tasks, we are going to use [these files](https://github.com/alx-tools/0x1B.c). We want to compile these only.
 
 ## Tasks
-0 - Create your first Makefile.
+0. Create your first Makefile.
 __Requirements__
 	* name of the executable: `school`
 	* rules: `all`
 		- The `all` rule builds your executable
 	* Variables: none
-1 - Requirements:
+
+1.  Requirements:
 	- name of the executable: `school`
-	- 
-2 - 
-3 - 
-4 - 
-5 - 
