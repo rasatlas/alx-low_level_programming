@@ -16,7 +16,7 @@
 
 ## Tasks
 
-0. Create your first Makefile.
+0. __Create your first Makefile.__
 * __Requirements:__
 	* name of the executable: `school`
 	* rules: `all`
@@ -32,7 +32,7 @@
 		- `CC`: the compiler to be used
 		- `SRC`: the `.c` files
 
-2. Create your first useful Makefile.
+2. __Create your first useful Makefile.__
 * __Requirements:__
 	- name of the executable: `school`
 	- rules: `all`
@@ -63,7 +63,7 @@
 	- The `clean`, `oclean`, `fclean`, `re` rules should never fail
 	- You are not allowed to have a list of all the `.o` files
 
-4. A complete Makefile
+4. __A complete Makefile__
 * __Requirements:__
 	- name of the executable: `school`
 	- rules: `all`, `clean`, `fclean`, `oclean`, `re`
@@ -83,7 +83,7 @@
 	- The `clean`, `oclean`, `fclean`, `re` rules should never fail
 	- You are not allowed to have a list of all the `.o` files
 
-5. Island Perimeter
+5. __Island Perimeter__
 * __Technical interview preparation:__
 	- You are not allowed to google anything
 	- Whiteboard first
