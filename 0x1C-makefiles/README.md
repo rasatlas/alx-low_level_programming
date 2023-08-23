@@ -17,7 +17,7 @@
 ## Tasks
 
 0. Create your first Makefile.
-__Requirements:__
+* __Requirements:__
 	* name of the executable: `school`
 	* rules: `all`
 		- The `all` rule builds your executable
@@ -33,7 +33,7 @@ __Requirements:__
 		- `SRC`: the `.c` files
 
 2. Create your first useful Makefile.
-__Requirements:__
+* __Requirements:__
 	- name of the executable: `school`
 	- rules: `all`
 		- The `all` rule builds your executable
@@ -64,7 +64,7 @@ __Requirements:__
 	- You are not allowed to have a list of all the `.o` files
 
 4. A complete Makefile
-__Requirements:__
+* __Requirements:__
 	- name of the executable: `school`
 	- rules: `all`, `clean`, `fclean`, `oclean`, `re`
 		- `all`: builds your executable
@@ -84,11 +84,11 @@ __Requirements:__
 	- You are not allowed to have a list of all the `.o` files
 
 5. Island Perimeter
-__Technical interview preparation:__
+* __Technical interview preparation:__
 	- You are not allowed to google anything
 	- Whiteboard first
 
-Create a function `def island_perimeter(grid):` that returns the perimeter of the island described in `grid:`
+* Create a function `def island_perimeter(grid):` that returns the perimeter of the island described in `grid:`
 
 	- `grid` is a list of list of integers:
 		- 0 represents a water zone
@@ -99,7 +99,7 @@ Create a function `def island_perimeter(grid):` that returns the perimeter of th
 	- Grid is completely surrounded by water, and there is one island (or nothing).
 	- The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island).
 
-__Requirements:__
+* __Requirements:__
 
 	- First line contains `#!/usr/bin/python3`
 	- You are not allowed to import any module
