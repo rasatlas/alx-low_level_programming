@@ -1,7 +1,10 @@
-CC := gcc
-SRC := $(wildcard *.c)
-OBJ := $(wildcard *.o)
-NAME := school
-all:
-	${CC} -c ${SRC}
+CC = gcc
+SRC = main.c school.c
+
+# The OBJ = $(SRC:.c=.o) line in a Makefile is a variable assignment that creates a list of object files from the list of source files. The : is a special character that separates the variable name from the list of dependencies. The .c=.o part of the line tells make to replace every .c file in the SRC list with its corresponding .o file. For example, if SRC is set to "file1.c file2.c", then OBJ will be set to "file1.o file2.o".
+#This line is useful for automating the compilation of C programs. When you run the make command, make will first look at the OBJ variable to see which object files need to be created. It will then compile each source file that does not have a corresponding object file.
+
+OBJ = $(SRC:.c=.o)
+NAME = school
+all:${OBJ}
 	${CC} ${OBJ} -o ${NAME}
