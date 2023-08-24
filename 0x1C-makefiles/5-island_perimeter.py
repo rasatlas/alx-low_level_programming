@@ -15,8 +15,6 @@ def island_perimeter(grid):
         The perimeter of the island defined in grid.
     """
 
-    row = 1
-    column = 1
     perimeter = 0
 
     for row in range(len(grid)):
