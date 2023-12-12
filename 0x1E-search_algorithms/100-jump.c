@@ -9,13 +9,13 @@
 
 int min(int a, int b)
 {
-	if(b>a)
+	if (b > a)
 	{
-		return a;
+		return (a);
 	}
 	else
 	{
-		return b;
+		return (b);
 	}
 }
 
