@@ -104,7 +104,7 @@ Value checked array[9] = [9]
 Found 999 at index: -1
 ```
 
-1. Binary search</br>
+__1. Binary search__</br>
 Write a function that searches for a value in a sorted array of integers using the [Binary search algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 
 - Prototype : `int binary_search(int *array, size_t size, int value);`
@@ -158,19 +158,19 @@ Searching in array: 8, 9
 Searching in array: 9
 ```
 
-2. Big O #0</br>
+__2. Big O #0__</br>
 What is the `time complexity` (worst case) of a linear search in an array of size `n`?
 
-3. Big O #1</br>
+__3. Big O #1__</br>
 What is the `space complexity` (worst case) of an iterative linear search algorithm in an array of size `n`?
 
-4. Big O #2</br>
+__4. Big O #2__</br>
 What is the `time complexity` (worst case) of a binary search in an array of size `n`?
 
-5. Big O #3</br>
+__5. Big O #3__</br>
 What is the `space complexity` (worst case) of a binary search in an array of size `n`?
 
-6. Big O #4</br>
+__6. Big O #4__</br>
 What is the space complexity of this function / algorithm?
 
 ```C
@@ -187,7 +187,7 @@ int **allocate_map(int n, int m)
 }
 ```
 
-7. Jump search</br>
+__7. Jump search__</br>
 Write a function that searches for a value in a sorted array of integers using the [Jump search algorithm](https://en.wikipedia.org/wiki/Jump_search)
 - Prototype : `int jump_search(int *array, size_t size, int value);`
 - Where `array` is a pointer to the first element of the array to search in
@@ -249,10 +249,10 @@ Value checked array[9] = [9]
 Found 999 at index: -1
 ```
 
-8. Big O #5</br>
+__8. Big O #5__</br>
 What is the `time complexity` (average case) of a jump search in an array of size `n`, using `step = sqrt(n)`?
 
-9. Interpolation search</br>
+__9. Interpolation search__</br>
 Write a function that searches for a value in a sorted array of integers using the [Interpolation search algorithm](https://en.wikipedia.org/wiki/Interpolation_search)
 - Prototype : `int interpolation_search(int *array, size_t size, int value);`
 - Where `array` is a pointer to the first element of the array to search in
@@ -300,7 +300,7 @@ Value checked array[2109] is out of range
 Found 999 at index: -1
 ```
 
-10. Exponential search</br>
+__10. Exponential search__</br>
 Write a function that searches for a value in a sorted array of integers using the [Exponential search algorithm](https://en.wikipedia.org/wiki/Exponential_search)
 - Prototype : `int exponential_search(int *array, size_t size, int value);`
 - Where `array` is a pointer to the first element of the array to search in
