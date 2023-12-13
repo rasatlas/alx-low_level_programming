@@ -1,24 +1,25 @@
 #include "search_algos.h"
 
 /**
-* min - a function that returns the minimum of two given numbers
-* @a: first integer value
-* @b: second integer value
-* Return: the smallest of a or b
-*/
+ * linearsearch - function to perform linear search
+ * @left: left boundary
+ * @right: right boundary
+ * @array: pointer to the first element of array
+ * @value: value to look for
+ * Return: index of value or -1 if it doesn't match to any element
+ */
 
-int min(int a, int b)
+int linearsearch(int *array, int left, int right, int value)
 {
-	if (b > a)
+	for (; left < right; left++)
 	{
-		return (a);
+		if (array[left] == value)
+		{
+			return (left);
+		}
 	}
-	else
-	{
-		return (b);
-	}
+	return (-1);
 }
-
 /**
 * jump_search - a function that searches for a value in a sorted
 * array of integers using jump search
@@ -32,29 +33,27 @@ int min(int a, int b)
 int jump_search(int *array, size_t size, int value)
 {
 	int left = 0;
-	int right = (int)(size - 1);
-	int jump = floor(sqrt(right));
+	int step = floor(sqrt((int)(size - 1)));
+	int right = step;
+	int isize = (int)size;
 
 	if (!array)
 	{
 		return (-1);
 	}
-	while (array[min(jump, right)] < value)
+	while (array[step] < value)
 	{
-		left = jump;
-		jump += floor(sqrt(right));
-		if (left > right)
+		left = right;
+		right += step;
+		if ((right > (isize - 1)) && (left < (isize - 1)) && (array[left]) < value)
+		{
+			linearsearch(array, left, right, value);
+		}
+		else
 		{
 			return (-1);
 		}
 	}
-	while (array[left] < value)
-	{
-		left++;
-		if (left == min(jump, right))
-		{
-			return (-1);
-		}
-	}
+	linearsearch(array, left, right, value);
 	return (-1);
 }
