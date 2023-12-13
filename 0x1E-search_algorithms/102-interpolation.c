@@ -12,5 +12,34 @@
 
 int interpolation_search(int *array, size_t size, int value)
 {
+	size_t pos;
+	int low = 0;
+	int high = (int)(size - 1);
+
+	if (!array)
+	{
+		return (-1);
+	}
+
+	if (low <= high && value >= array[low] && value <= array[high])
+	{
+		pos = low + (((double)(high - low) / (array[high] - array[low]))
+		* (value - array[low]));
+
+		if (array[(int)pos])
+		{
+			return (pos);
+		}
+
+		if (array[(int)pos] < value)
+		{
+			return (interpolation_search(array, pos + 1, value));
+		}
+
+		if (array[(int)pos] > value)
+		{
+			return (interpolation_search(array, pos - 1, value));
+		}
+	}
 	return (-1);
 }
